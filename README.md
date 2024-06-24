@@ -50,8 +50,8 @@ The data was collected using the following steps:
 The dataset and the Google Colab notebooks used for data preparation are available in the repository's `dataset` folder.
 
 The dataset and the Google Colab notebooks used for data preparation are available in the repository's `dataset` folder. You can find the specific notebooks here:
-- [DataPrep.ipynb](dataset/DataPrep.ipynb)
-- [SimilarityMatrix.ipynb](dataset/SimilarityMatrix.ipynb)
+- [DataPrep.ipynb](data/DataPrep.ipynb)
+- [SimilarityMatrix.ipynb](data/SimilarityMatrix.ipynb)
 
 
 ## Algorithm and Similarity Measure
