@@ -44,12 +44,12 @@ The data includes the following columns:
 
 The data was collected using the following steps:
 1. **Fetching Movie Data:** Using IMDb and TMDB APIs to get details about movies.
-2. **Feature Extraction:** Extracting features such as genres, overview, cast, director, and title for each movie.
+2. **Feature Extraction:** Extracting each movie's features such as genres, overview, cast, director, and title.
 3. **Preprocessing:** Cleaning and transforming the data into a suitable format for building the recommendation model.
 
-The dataset and the Google Colab notebooks used for data preparation are available in the repository's `dataset` folder.
+The dataset and the Google Colab notebooks used for data preparation are in the repository's `dataset` folder.
 
-The dataset and the Google Colab notebooks used for data preparation are available in the repository's `dataset` folder. You can find the specific notebooks here:
+The dataset and the Google Colab notebooks used for data preparation are in the repository's `dataset` folder. You can find the specific notebooks here:
 - [DataPrep.ipynb](data/DataPrep.ipynb)
 - [SimilarityMatrix.ipynb](data/SimilarityMatrix.ipynb)
 
@@ -82,17 +82,17 @@ To run the movie recommendation system, follow these steps:
 1. **Create the Similarity Matrix:**
    - Open the `SimilarityMatrix.ipynb` notebook in Google Colab or your local Jupyter environment.
    - Execute the cells to create the similarity matrix.
-   - Save the generated similarity matrix to the `data` folder in your project directory alongside the dataframe.
+   - Save the generated similarity matrix to the `data` folder in your project directory alongside the data frame.
 
 2. **Install Requirements:**
-   - Ensure you have Python installed.
+   - Please make sure you have Python installed.
    - Install the necessary dependencies by running:
      ```sh
      pip install -r requirements.txt
      ```
 
 3. **Run the Application:**
-   - Once the similarity matrix and dataframe are in place, run the application using:
+   - Once the similarity matrix and data frame are in place, run the application using:
      ```sh
      python app.py
      ```
