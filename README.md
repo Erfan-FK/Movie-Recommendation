@@ -2,11 +2,11 @@
 
 This project is a content-based movie recommendation system.
 
-<img src="/static/gif/Shrek.gif" alt="Gif" width="800" height="400">
+<img src="/static/gif/Shrek.gif" alt="Gif">
 
-<img src="/static/gif/spider-man.gif" alt="Gif" width="800" height="400">
+<img src="/static/gif/spider-man.gif" alt="Gif">
 
-<img src="/static/gif/hobbit.gif" alt="Gif" width="800" height="400">
+<img src="/static/gif/hobbit.gif" alt="Gif">
 
 ## Table of Contents
 1. [Introduction](#introduction)
