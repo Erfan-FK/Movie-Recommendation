@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/detail.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1 class="title">Movie Recommendation System</h1>
+    <div class="search-container">
+        <input type="text" placeholder="Movie Title" id="search-input" autocomplete="off">
+        <div class="search"></div>
+    </div>
+</div>
+
+<div class="movie-details">
+    <img src="https://image.tmdb.org/t/p/w500{{ movie['poster_path'] }}" alt="Movie Poster" class="movie-poster">
+    <div class="movie-info">
+        <h1>{{ movie['title'] }}</h1>
+        <p><strong>Release Date:</strong> {{ movie['release_date'] }}</p>
+        <p><strong>Director:</strong> {{ movie['director'] }}</p>
+        <p><strong>Overview: </strong>{{ movie['overview'] }}</p>
+        <p><strong>Rating:</strong> {{ "%.1f"|format(movie['rating']) }}</p>
+        <p><strong>Duration:</strong> {{ movie['runtime'] }} minutes</p>
+    </div>
+</div>
+
+<h2 class="section-title">Cast</h2>
+<div class="cast-container">
+    {% for cast_member in movie['cast'] %}
+        <div class="cast-member">
+            <img src="https://image.tmdb.org/t/p/w200{{ cast_member['profile_path'] }}" alt="{{ cast_member['name'] }}" class="cast-photo">
+            <div>{{ cast_member['name'] }}<br><span class="character">{{ cast_member['character'] }}</span></div>
+        </div>
+    {% endfor %}
+</div>
+
+<h2 class="section-title">Recommended Movies</h2>
+<div class="recommended-container">
+    {% for rec_movie in movie['recommended_movies'] %}
+        <div class="recommended-movie">
+            <img src="https://image.tmdb.org/t/p/w200{{ rec_movie['poster_path'] }}" alt="Recommended Movie Poster" class="recommended-photo">
+            <div class="rec-movie-title">{{ rec_movie['title'] }}</div>
+        </div>
+    {% endfor %}
+</div>
+
+<script>
+    document.querySelector('.search').addEventListener('click', function() {
+        document.getElementById('search-input').focus();
+    });
+
+    document.getElementById('search-input').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            window.location.href = '/detail?title=' + encodeURIComponent(e.target.value);
+        }
+    });
+</script>
+</body>
+</html>
