@@ -23,8 +23,7 @@ The **Movie Recommendation System** uses a content-based filtering approach to s
 
 This project was developed using the following technologies:
 
-[![My Skills](https://skillicons.dev/icons?i=py,flask,js,html,css&theme=light)](https://skillicons.dev)
-![Google Colab](https://img.icons8.com/color/48/000000/google-colab.png)
+[![My Skills](https://skillicons.dev/icons?i=py,flask,js,html,css&theme=light)](https://skillicons.dev) ![Google Colab](https://img.icons8.com/color/48/000000/google-colab.png)
 
 
 ## Dataset Preparation
